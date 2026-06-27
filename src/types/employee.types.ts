@@ -1,0 +1,28 @@
+export interface Employee {
+    employee_id: number;
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    salary: number;
+    department_id: number;
+}
+
+export interface createEmployeeRequest {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    salary: number;
+    department_id: number;
+}
+
+export interface updateEmployeeRequest {
+    first_name: string;
+    last_name: string;
+    email: string;
+    phone: string;
+    salary: number;
+    department_id: number;
+
+}
