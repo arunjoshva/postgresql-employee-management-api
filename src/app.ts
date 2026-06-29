@@ -12,6 +12,21 @@ const app = express();
 //middleware
 app.use(express.json());
 
+// Root Route
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    project: "Employee Management REST API",
+    status: "Running",
+    version: "1.0.0",
+    endpoints: {
+      employees: "/api/v1/employees",
+      departments: "/api/v1/departments",
+      attendance: "/api/v1/attendance",
+      payroll: "/api/v1/payroll",
+    },
+  });
+});
+
 //register the route
 app.use("/api/v1/employees", employeeRoutes);
 app.use("/api/v1/departments", departmentRoutes);
